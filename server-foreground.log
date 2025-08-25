@@ -1,0 +1,156 @@
+DB Connection Success
+App is listening at 4000
+New document saved to database
+Email sent successfully: 250 2.0.0 OK  1756117221 d2e1a72fcca58-771e814cbfcsm1631817b3a.26 - gsmtp
+Email sent successfully:  250 2.0.0 OK  1756117221 d2e1a72fcca58-771e814cbfcsm1631817b3a.26 - gsmtp
+OTP Body {
+  email: 'test+signup987@example.com',
+  otp: '528846',
+  _id: new ObjectId("68ac38dca593d61646f823fd"),
+  createdAt: 2025-08-25T10:20:12.706Z,
+  __v: 0
+}
+New document saved to database
+Email sent successfully: 250 2.0.0 OK  1756117301 d9443c01a7336-2466885efd4sm64488545ad.69 - gsmtp
+Email sent successfully:  250 2.0.0 OK  1756117301 d9443c01a7336-2466885efd4sm64488545ad.69 - gsmtp
+OTP Body {
+  email: 'swaroopkumar799@gmail.com',
+  otp: '626802',
+  _id: new ObjectId("68ac3932a593d61646f82401"),
+  createdAt: 2025-08-25T10:21:38.978Z,
+  __v: 0
+}
+🔍 Getting all reviews
+✅ Found 5 total reviews
+🔍 Getting all reviews
+✅ Found 5 total reviews
+DETAILS {
+  _id: new ObjectId("68a754e53368965761acd104"),
+  firstName: 'Final',
+  lastName: 'Testing',
+  email: '22051115@kiit.ac.in',
+  password: '$2b$10$FgimZneq3nq.hOtZ99A.6OKqyPTfUUZkTTk0mi6HsXdJJlhMG1HMq',
+  accountType: 'Student',
+  active: true,
+  approved: true,
+  additionalDetails: new ObjectId("68a754e53368965761acd102"),
+  courses: [ new ObjectId("68a554fe1194e9bf6ff9eb11") ],
+  image: '',
+  courseProgress: [ new ObjectId("68a755683368965761acd13d") ],
+  createdAt: 2025-08-21T17:18:29.780Z,
+  updatedAt: 2025-08-25T10:25:52.255Z,
+  __v: 0,
+  resetPasswordExpires: 2025-08-25T10:35:52.253Z,
+  resetPasswordOTP: '118860'
+}
+Email sent successfully: 250 2.0.0 OK  1756117554 d2e1a72fcca58-7703ffbb40esm7060892b3a.11 - gsmtp
+Reset Password Request Body: {
+  password: 'xcvbnm',
+  confirmPassword: 'xcvbnm',
+  otp: '118860',
+  email: '22051115@kiit.ac.in'
+}
+Looking for user with email and OTP: 22051115@kiit.ac.in 118860
+User found: Yes
+OTP expiry: 2025-08-25T10:35:52.253Z
+Current time: 2025-08-25T10:26:23.624Z
+Password updated successfully for user: 22051115@kiit.ac.in
+{
+  email: '22051115@kiit.ac.in',
+  id: '68a754e53368965761acd104',
+  accountType: 'Student',
+  iat: 1756117593,
+  exp: 1756203993
+}
+{
+  email: '22051115@kiit.ac.in',
+  id: '68a754e53368965761acd104',
+  accountType: 'Student',
+  iat: 1756117593,
+  exp: 1756203993
+}
+{
+  email: '22051115@kiit.ac.in',
+  id: '68a754e53368965761acd104',
+  accountType: 'Student',
+  iat: 1756117593,
+  exp: 1756203993
+}
+{
+  email: '22051115@kiit.ac.in',
+  id: '68a754e53368965761acd104',
+  accountType: 'Student',
+  iat: 1756117593,
+  exp: 1756203993
+}
+{
+  email: '22051115@kiit.ac.in',
+  id: '68a754e53368965761acd104',
+  accountType: 'Student',
+  iat: 1756117593,
+  exp: 1756203993
+}
+68a754e53368965761acd104
+New document saved to database
+Email sent successfully: 250 2.0.0 OK  1756117628 d9443c01a7336-2466885ed5csm64699935ad.102 - gsmtp
+Email sent successfully:  250 2.0.0 OK  1756117628 d9443c01a7336-2466885ed5csm64699935ad.102 - gsmtp
+OTP Body {
+  email: '22051115@kiit.ac.in',
+  otp: '511152',
+  _id: new ObjectId("68ac3a79a593d61646f82430"),
+  createdAt: 2025-08-25T10:27:05.593Z,
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("68ac3a79a593d61646f82430"),
+    email: '22051115@kiit.ac.in',
+    otp: '511152',
+    createdAt: 2025-08-25T10:27:05.593Z,
+    __v: 0
+  }
+]
+🔍 Getting all reviews
+✅ Found 5 total reviews
+🔍 Getting all reviews
+✅ Found 5 total reviews
+{
+  email: '22051115@kiit.ac.in',
+  id: '68ac3a9aa593d61646f82436',
+  accountType: 'Student',
+  iat: 1756117677,
+  exp: 1756204077
+}
+{
+  email: '22051115@kiit.ac.in',
+  id: '68ac3a9aa593d61646f82436',
+  accountType: 'Student',
+  iat: 1756117677,
+  exp: 1756204077
+}
+🔍 Getting all reviews
+✅ Found 5 total reviews
+🔍 Getting all reviews
+✅ Found 5 total reviews
+🔍 Getting all reviews
+✅ Found 5 total reviews
+🔍 Getting all reviews
+✅ Found 5 total reviews
+{
+  email: '22051115@kiit.ac.in',
+  id: '68ac3a9aa593d61646f82436',
+  accountType: 'Student',
+  iat: 1756117677,
+  exp: 1756204077
+}
+{
+  email: '22051115@kiit.ac.in',
+  id: '68ac3a9aa593d61646f82436',
+  accountType: 'Student',
+  iat: 1756117677,
+  exp: 1756204077
+}
+🔍 Getting all reviews
+✅ Found 5 total reviews
+🔍 Getting all reviews
+✅ Found 5 total reviews

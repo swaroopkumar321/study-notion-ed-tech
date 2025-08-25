@@ -182,25 +182,30 @@ exports.login = async (req, res) => {
 // Send OTP For Email Verification
 exports.sendotp = async (req, res) => {
   try {
-    const { email } = req.body
+    const { email, checkUserPresent } = req.body
 
-    // Check if user is already present
-    // Find user with provided email
-    const checkUserPresent = await User.findOne({ email })
-    // to be used in case of signup
+    // Find user with provided email (if any)
+    const existingUser = await User.findOne({ email })
 
-    // If user found with provided email
-    if (checkUserPresent) {
-      // Return 401 Unauthorized status code with error message
+    // If caller expects no existing user (signup) but user exists -> reject
+    if (checkUserPresent === true && existingUser) {
       return res.status(401).json({
         success: false,
         message: `User is Already Registered`,
       })
     }
 
+    // If caller expects an existing user (login/forgot) but user does not exist -> reject
+    if (checkUserPresent === false && !existingUser) {
+      return res.status(401).json({
+        success: false,
+        message: `User is not registered`,
+      })
+    }
+
     // Generate a unique 6-digit OTP
-    let otp;
-    let existingOtp;
+    let otp
+    let existingOtp
     do {
       otp = otpGenerator.generate(6, {
         upperCaseAlphabets: false,
@@ -209,14 +214,14 @@ exports.sendotp = async (req, res) => {
       })
       existingOtp = await OTP.findOne({ otp })
     } while (existingOtp)
-    const otpPayload = { email, otp }
-    const otpBody = await OTP.create(otpPayload)
+
+    const otpBody = await OTP.create({ email, otp })
     console.log("OTP Body", otpBody)
-    
-    res.status(200).json({
+
+    // Success response (do not return OTP in production)
+    return res.status(200).json({
       success: true,
       message: `OTP Sent Successfully`,
-      otp,
     })
   } catch (error) {
     console.log(error.message)

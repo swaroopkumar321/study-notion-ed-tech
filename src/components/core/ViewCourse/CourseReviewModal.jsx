@@ -122,6 +122,10 @@ export default function CourseReviewModal({ setReviewModal }) {
                 id="courseExperience"
                 placeholder="Add Your Experience"
                 {...register("courseExperience", { required: true })}
+                // stop propagation so global key handlers (video player etc.) don't intercept keys
+                onKeyDown={(e) => e.stopPropagation()}
+                onKeyUp={(e) => e.stopPropagation()}
+                onKeyPress={(e) => e.stopPropagation()}
                 className="form-style resize-x-none min-h-[130px] w-full"
               />
               {errors.courseExperience && (
